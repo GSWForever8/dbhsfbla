@@ -11,7 +11,7 @@ export default function Home(){
     <div class="contentwrap center">
         <div className="topHolder">
             <img className="topImage" src={topPhoto} alt="Top"/>
-            <div className="overlayText-small">WELCOME TO DBHS FBLA</div>
+            <div className="overlayText-small">DBHS FBLA</div>
         </div>
         <div class="quicklinks">
             <Link to="/about"><div className="icons">
