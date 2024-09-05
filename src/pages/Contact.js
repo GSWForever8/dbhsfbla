@@ -28,13 +28,13 @@ export default function Contact(){
             <tr>
                 <td>Communications</td>
                 <td>Claire Lee</td>
-                <td><a href=""></a></td>
+                <td><a href="mailto: claireelisabethlee@gmail.com">claireelisabethlee@gmail.com</a></td>
                 <td>VP of Communications</td>
             </tr>
             <tr>
                 <td>Chapter Events</td>
                 <td>Katelyn Suen</td>
-                <td><a href=""></a></td>
+                <td><a href="mailto: katelynsuen@gmail.com">katelynsuen@gmail.com</a></td>
                 <td>VP of Chapter Events</td>
             </tr>
             <tr>
@@ -46,19 +46,19 @@ export default function Contact(){
             <tr>
                 <td>Sponsorship/Finance</td>
                 <td>Emme Huang</td>
-                <td><a href=""></a></td>
+                <td><a href="mailto: huangemme@gmail.com">huangemme@gmail.com</a></td>
                 <td>Finance Director</td>
             </tr>
             <tr>
                 <td>External Affairs</td>
                 <td>Grace Wen</td>
-                <td><a href=""></a></td>
+                <td><a href="mailto: gracewen5280@gmail.com">gracewen5280@gmail.com</a></td>
                 <td>President of External Affairs</td>
             </tr>
             <tr>
                 <td>Internal Affairs</td>
                 <td>Maddie Wong</td>
-                <td><a href=""></a></td>
+                <td><a href="mailto: maddieayumi@gmail.com">maddieayumi@gmail.com</a></td>
                 <td>President of Internal Affairs</td>
             </tr>
             <tr>
