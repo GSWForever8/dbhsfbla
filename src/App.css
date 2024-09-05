@@ -71,6 +71,7 @@ html, body {
   }
   .side {
     grid-template-columns: 1fr;
+    padding:5px;
     background-color: white;
     display: grid;
     color: black;
@@ -137,6 +138,7 @@ html, body {
   }
   .side {
     grid-template-columns: 3fr 1fr;
+    padding:5px;
     background-color: white;
     display: grid;
     color: black;
@@ -251,6 +253,8 @@ th,td{
 }
 table,th,td{
   border: 5px solid blue;
+  padding:10px;
+  margin: 0 auto;
 }
 tr:hover{
   background-color:gold;
@@ -263,4 +267,9 @@ tr:hover{
 .header:hover{
   background-color:navy;
   color:gold;
+}
+.pad{
+  padding:10px;
+  align-items:center;
+  align-content:center;
 }

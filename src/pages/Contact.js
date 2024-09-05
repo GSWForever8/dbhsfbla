@@ -5,7 +5,7 @@ export default function Contact(){
         <div className="topHolder">
             <h1>Get in Touch!</h1>
         </div>
-        <h2>Email list</h2>
+        <div className="pad">
         <table>
             <tr className="header">
                 <th>Topic</th>
@@ -64,17 +64,23 @@ export default function Contact(){
             <tr>
                 <td>Advisor</td>
                 <td>Mr. Pierce</td>
-                <td><a href=""></a></td>
+                <td><a href="mailto: jpierce@wvusd.org">jpierce@wvusd.org</a></td>
                 <td>Advisor</td>
             </tr>
             <tr>
                 <td>Advisor</td>
                 <td>Mrs. Morales</td>
-                <td><a href=""></a></td>
+                <td><a href="mailto: lmorales@wvusd.org">lmorales@wvusd.org</a></td>
                 <td>Advisor</td>
             </tr>
+            <tr>
+                <td>Other</td>
+                <td></td>
+                <td><a href="mailto: dbhsfbla@gmail.com">dbhsfbla@gmail.com</a></td>
+                <td></td>
+            </tr>
         </table>
-        <h3>Any other inquiries please email them to <a href="mailto:dbhsfbla@gmail.com">dbhsfbla@gmail.com</a></h3>
+        </div>
     </div>
     );
 }
