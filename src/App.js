@@ -38,7 +38,7 @@ function App() {
         </Routes>
         </div>
       <footer className="footer">
-        <p>DBHS FBLA 2024 Developed by Aidan Hong</p>
+        <p>DBHS FBLA 2024 © Developed by Aidan Hong</p>
       </footer>
     </Router>
   );
