@@ -40,14 +40,14 @@ export default function Contact(){
             <tr>
                 <td>Projects+Community Service</td>
                 <td>Maxwell Huang</td>
-                <td><a href=""></a></td>
+                <td><a href="mailto: maxhuang2008@gmail.com">maxhuang2008@gmail.com</a></td>
                 <td>VP of Projects</td>
             </tr>
             <tr>
                 <td>Sponsorship/Finance</td>
                 <td>Emme Huang</td>
                 <td><a href="mailto: huangemme@gmail.com">huangemme@gmail.com</a></td>
-                <td>Finance Director</td>
+                <td>VP of Finance</td>
             </tr>
             <tr>
                 <td>External Affairs</td>
