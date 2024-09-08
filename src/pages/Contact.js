@@ -16,7 +16,7 @@ export default function Contact(){
             <tr>
                 <td>Competitive Events+Website Issues</td>
                 <td>Aidan Hong</td>
-                <td><a href="mailto:aidanhong8@gmailcom">aidanhong8@gmail.com</a></td>
+                <td><a href="mailto:aidanhong8@gmail.com">aidanhong8@gmail.com</a></td>
                 <td>Co-VP of Competitive Events</td>
             </tr>
             <tr>
