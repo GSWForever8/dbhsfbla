@@ -273,3 +273,6 @@ tr:hover{
   align-items:center;
   align-content:center;
 }
+.navbar-nav .nav-link {
+  color: gold;
+}
