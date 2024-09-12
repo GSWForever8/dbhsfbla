@@ -3,7 +3,7 @@ import topPhoto from '../DSC07726.jpeg';
 import cte from '../ctecourses.png';
 import confused from '../confused.jpg';
 import cal from '../678116-calendar-512.webp';
-import roster from '../roster.png';
+import list from '../vector-list-icon.jpg';
 import folder from '../folder.png';
 export default function CompEvents() {
     return (
@@ -62,10 +62,10 @@ export default function CompEvents() {
                         <img className="Image" src={cal} alt="Top"/>
                     </div>
                     </a>
-                    <a href="">
+                    <a href="https://docs.google.com/spreadsheets/d/1ZUQkk7sUsLYyhehyBJESuUfJlG47R-51xyS3hy8gLaQ/edit?usp=sharing">
                     <div className="icons">
-                        <h3>Competition Roster-Coming Soon!</h3>
-                        <img className="Image" src={roster} alt="Top"/>
+                        <h3>Competitive Events List</h3>
+                        <img className="Image" src={list} alt="Top"/>
                     </div>
                     </a>
                     <a href="https://drive.google.com/drive/u/0/folders/1RI8K2BXkT-unWclKnjNfdT8gGeegY9jo">

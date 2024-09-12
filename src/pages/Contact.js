@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 export default function Contact(){
     return(
     <div class="contentwrap">
+        <div class="stuff">
         <div className="topHolder">
             <h1>Get in Touch!</h1>
         </div>
@@ -80,6 +81,7 @@ export default function Contact(){
                 <td></td>
             </tr>
         </table>
+        </div>
         </div>
     </div>
     );
