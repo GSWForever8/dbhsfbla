@@ -8,7 +8,7 @@ import shake from "../shake.jpg";
 import gov from "../gov.png";
 import fund from "../fund.png";
 import lfc from "../l4c.jpeg";
-import md from "../md.png";
+import alw from "../images-4.jpeg";
 import ae from "../ae.jpeg";
 import report from "../3280890.png";
 import business from "../icon.png";
@@ -67,7 +67,7 @@ export default function Projects(){
                     </div>
                     <div>
                         <h3>Alzheimers Walk</h3>
-                        <img className="Image" src={md}/>
+                        <img className="Image" src={alw}/>
                     </div>
                     <div>
                         <h3>Young Investors Society</h3>

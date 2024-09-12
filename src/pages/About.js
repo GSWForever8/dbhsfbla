@@ -7,6 +7,7 @@ export default function About(){
             <img className="topImage" src={topPhoto} alt="Top" style={{width:"3300px"}}/>
             <div className="overlayText">About Us</div>
         </div>
+        <div className="stuff">
         <h1>About FBLA-PBL</h1>
         <h3>Future Business Leaders of America - Phi Beta Lamda, Inc. (FBLA-PBL) is the largest student-run organization in the world. FBLA-PBL allows members to develop soft skills, network with business professionals, and succeed in academic competitions that prepare them for careers in business. The organization also organizes conferences, seminars, and workshops for both members and advisors, including the prestigious National Leadership Conference (NLC). </h3>
         <h1>About DBHS FBLA</h1>
@@ -51,6 +52,7 @@ export default function About(){
             <div>
                 <h2>Vice President of Projects: Maxwell Huang</h2>
             </div>
+        </div>
         </div>
     </div>
     );
