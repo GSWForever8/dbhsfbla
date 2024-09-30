@@ -28,7 +28,6 @@ html, body {
 
 .nav {
   background-color: navy;
-  overflow: hidden;
   padding: 10px;
   text-align: center;
   font-weight: bold;
@@ -332,4 +331,29 @@ tr:hover{
 }
 .stuff{
   padding:5px;
+}
+.dropdow-menu{
+  z-index:9999999;
+  background-color:navy;
+}
+.dropdown-menu.show{
+  background-color:navy;
+}
+.dropdown-toggle{
+  background-color: navy !important;
+  color: gold !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.dropdown-toggle:focus, .dropdown-toggle:active,.dropdown-toggle:hover{
+  background-color: navy !important;
+  color: white !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.dropdown-item,.dropdown-item:hover{
+  background-color:navy;
+}
+.dropdown-item:hover{
+  color:white;
 }

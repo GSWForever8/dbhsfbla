@@ -23,6 +23,16 @@ function App() {
               <li className="nav-item"><Link className="nav-link bar" to="/compevents">Competitive Events</Link></li>
               <li className="nav-item"><Link className="nav-link bar" to="/projects">Projects</Link></li>
               <li className="nav-item"><Link className="nav-link bar" to="/qa">Q&A</Link></li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle bar" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Socials
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a className="dropdown-item bar" href="https://www.remind.com/join/48d4c8">Remind</a></li>
+                  <li><a className="dropdown-item bar" href="https://www.instagram.com/fbla.dbhs/">Instagram</a></li>
+                </ul>
+              </li>
+
               <li className="nav-item"><Link className="nav-link bar" to="/contact">Contact Us</Link></li>
             </ul>
           </div>
