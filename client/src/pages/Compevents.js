@@ -50,7 +50,7 @@ export default function CompEvents() {
                 </div>
                 <div>
                     <h1>Quick Links</h1>
-                    <a href="https://dbhsfbla.onrender.com/#/compevents/resources">
+                    <a href="https://dbhsfbla.onrender.com/compevents/resources">
                     <div className="icons">
                         <h3>Resource Folder</h3>
                         <img className="Image" src={folder} alt="Top"/>
