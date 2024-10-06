@@ -1,0 +1,7 @@
+version: 1
+static:
+  directory: build
+  clean: true
+  routes:
+    - src: /*
+      dest: /app.js
