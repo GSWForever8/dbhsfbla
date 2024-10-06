@@ -50,6 +50,12 @@ export default function CompEvents() {
                 </div>
                 <div>
                     <h1>Quick Links</h1>
+                    <a href="https://dbhsfbla.onrender.com/#/compevents/resources">
+                    <div className="icons">
+                        <h3>Resource Folder</h3>
+                        <img className="Image" src={folder} alt="Top"/>
+                    </div>
+                    </a>
                     <a href="https://docs.google.com/document/d/1_6vxyYp-j06TeXr3oHiee1hvgP1RUDZ2DJaJbXAJ9Dk/edit">
                         <div className="icons">
                         <h3>Which event should I do?</h3>
@@ -66,12 +72,6 @@ export default function CompEvents() {
                     <div className="icons">
                         <h3>Competitive Events List</h3>
                         <img className="Image" src={list} alt="Top"/>
-                    </div>
-                    </a>
-                    <a href="https://dbhsfbla.onrender.com/#/compevents/resources">
-                    <div className="icons">
-                        <h3>Resource Folder</h3>
-                        <img className="Image" src={folder} alt="Top"/>
                     </div>
                     </a>
                 </div>
