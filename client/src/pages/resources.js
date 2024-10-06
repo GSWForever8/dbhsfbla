@@ -40,7 +40,7 @@ export default function Resources() {
     const [error, setError] = useState(null);
 
     // Define the API URL
-    const API_URL = 'http://localhost:3001'; // Replace with your backend URL
+    const API_URL = 'https://dbhsfbla-resource.onrender.com'; // Replace with your backend URL
 
     const authenticateUser = () => {
         window.location.href = `${API_URL}/auth/google`;
