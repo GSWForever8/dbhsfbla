@@ -2,9 +2,10 @@ const express = require('express');
 const session = require('express-session'); 
 const { google } = require('googleapis');
 const cors = require('cors');
+const MongoStore = require('connect-mongo'); // Import connect-mongo
 require('dotenv').config();
 const crypto = require('crypto'); 
-const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose'); // Import mongoose
 
 const app = express();
 function generateSessionSecret() {
@@ -13,6 +14,8 @@ function generateSessionSecret() {
 
 const FOLDER_ID = process.env.FOLDER_ID;
 const sessionSecret = process.env.SESSION_SECRET || generateSessionSecret();
+const mongoURI = process.env.MONGO_URI; // MongoDB URI from your environment variables
+
 // CORS configuration
 const corsOptions = {
     origin: 'https://dbhsfbla.onrender.com', 
@@ -22,12 +25,23 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 
+// Connect to MongoDB
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error('MongoDB connection error:', err));
+
+// Set up session store with MongoDB
 app.use(session({
     secret: sessionSecret, 
     resave: false,
     saveUninitialized: false,
+    store: MongoStore.create({ 
+        mongoUrl: mongoURI, 
+        dbName: 'cookies',
+        collectionName: 'sessions', 
+        ttl: 14 * 24 * 60 * 60, }), 
     cookie: {
-        secure:true,
+        secure: true,
         httpOnly: true,
         sameSite: 'None',
     },
@@ -59,7 +73,7 @@ app.get('/auth/google/callback', async (req, res) => {
         console.log("Getting tokens");
         const { tokens } = await oauth2Client.getToken(code);
         oauth2Client.setCredentials(tokens);
-        req.session.tokens = tokens;
+        req.session.tokens = tokens; // Store tokens in session
         console.log("Tokens received:", tokens);
         console.log("Tokens received:", req.session.tokens);
         console.log("redirecting");
@@ -132,8 +146,6 @@ const fetchFilesInFolder = async (drive, folderId) => {
 
     return results;
 };
-
-
 
 // Optional: Logout route
 app.get('/logout', (req, res) => {
