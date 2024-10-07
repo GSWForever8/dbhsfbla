@@ -34,6 +34,7 @@ export default function QA() {
               </div>
             </div>
           </div>
+
           <div className="card">
             <div className="card-header" id="headingTwo">
               <h5 className="mb-0">
@@ -60,15 +61,16 @@ export default function QA() {
               </div>
             </div>
           </div>
+
           <div className="card">
-            <div className="card-header" id="headingTwo">
+            <div className="card-header" id="headingThree">
               <h5 className="mb-0">
                 <button
                   className="btn btn-link"
                   data-toggle="collapse"
-                  data-target="#collapseTwo"
+                  data-target="#collapseThree"
                   aria-expanded="false"
-                  aria-controls="collapseTwo"
+                  aria-controls="collapseThree"
                 >
                   The resource folder isn't loading!
                 </button>
@@ -76,9 +78,9 @@ export default function QA() {
             </div>
 
             <div
-              id="collapseTwo"
+              id="collapseThree"
               className="collapse"
-              aria-labelledby="headingTwo"
+              aria-labelledby="headingThree"
               data-parent="#accordion"
             >
               <div className="card-body">
@@ -86,15 +88,16 @@ export default function QA() {
               </div>
             </div>
           </div>
+
           <div className="card">
-            <div className="card-header" id="headingTwo">
+            <div className="card-header" id="headingFour">
               <h5 className="mb-0">
                 <button
                   className="btn btn-link"
                   data-toggle="collapse"
-                  data-target="#collapseTwo"
+                  data-target="#collapseFour"
                   aria-expanded="false"
-                  aria-controls="collapseTwo"
+                  aria-controls="collapseFour"
                 >
                   My question isn't answered, how do I reach out?
                 </button>
@@ -102,9 +105,9 @@ export default function QA() {
             </div>
 
             <div
-              id="collapseTwo"
+              id="collapseFour"
               className="collapse"
-              aria-labelledby="headingTwo"
+              aria-labelledby="headingFour"
               data-parent="#accordion"
             >
               <div className="card-body">
