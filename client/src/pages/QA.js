@@ -34,7 +34,58 @@ export default function QA() {
               </div>
             </div>
           </div>
+          <div className="card">
+            <div className="card-header" id="headingTwo">
+              <h5 className="mb-0">
+                <button
+                  className="btn btn-link"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  The resource folder is in an authentication loop, what's wrong?
+                </button>
+              </h5>
+            </div>
 
+            <div
+              id="collapseTwo"
+              className="collapse"
+              aria-labelledby="headingTwo"
+              data-parent="#accordion"
+            >
+              <div className="card-body">
+                Change your browser setting to turn off "Prevent cross site scripting", this is due to the resource folder having a different domain from this website.
+              </div>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-header" id="headingTwo">
+              <h5 className="mb-0">
+                <button
+                  className="btn btn-link"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  The resource folder isn't loading!
+                </button>
+              </h5>
+            </div>
+
+            <div
+              id="collapseTwo"
+              className="collapse"
+              aria-labelledby="headingTwo"
+              data-parent="#accordion"
+            >
+              <div className="card-body">
+                It can take up to around 2 minutes for the server to boot up sometimes.
+              </div>
+            </div>
+          </div>
           <div className="card">
             <div className="card-header" id="headingTwo">
               <h5 className="mb-0">

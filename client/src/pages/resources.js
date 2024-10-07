@@ -37,6 +37,7 @@ const FileTree = ({ files }) => {
 
 export default function Resources() {
     const [files, setFiles] = useState([]);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     // Define the API URL
@@ -47,10 +48,13 @@ export default function Resources() {
     };
 
     const fetchFiles = async () => {
+      setLoading(true);
         try {
             const response = await axios.get(`${API_URL}/files`, { withCredentials: true });
             setFiles(response.data);
+            setLoading(false);
         } catch (err) {
+            setLoading(false);
             // If unauthorized, redirect to authenticate
             if (err.response && err.response.status === 401) {
                 authenticateUser();
@@ -68,6 +72,7 @@ export default function Resources() {
         <div className="contentwrap">
             <h1>Resources</h1>
             {error && <p>{error}</p>}
+            {loading && <h2>Loading files, please wait</h2>}
             <FileTree files={files} />
         </div>
     );
