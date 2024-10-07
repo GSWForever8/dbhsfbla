@@ -80,6 +80,13 @@ app.get('/auth/google/callback', async (req, res) => {
         console.log("Tokens received:", tokens);
         console.log("Tokens received:", req.session.tokens);
         console.log("redirecting");
+        req.session.save((err)=>{
+            if(err){
+                console.error("Error saving session:",err);
+            }else{
+                console.log("req.session saved successfully");
+            }
+        });
         res.redirect('https://dbhsfbla.onrender.com/compevents/resources'); 
     } catch (error) {
         console.error('Error during authentication', error);
