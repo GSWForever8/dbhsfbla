@@ -7,12 +7,9 @@ require('dotenv').config();
 const crypto = require('crypto'); 
 const mongoose = require('mongoose'); // Import mongoose
 const app = express();
-function generateSessionSecret() {
-    return crypto.randomBytes(32).toString('hex'); 
-}
 
 const FOLDER_ID = process.env.FOLDER_ID;
-const sessionSecret = process.env.SESSION_SECRET || generateSessionSecret();
+const sessionSecret = process.env.SESSION_SECRET;
 const mongoURI = process.env.MONGO_URI; // MongoDB URI from your environment variables
 
 // CORS configuration
