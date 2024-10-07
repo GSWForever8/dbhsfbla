@@ -39,11 +39,12 @@ app.use(session({
         mongoUrl: mongoURI, 
         dbName: 'cookies',
         collectionName: 'sessions', 
-        ttl: 14 * 24 * 60 * 60, }), 
+        ttl: 14 * 24 * 60 * 60, }) ,
     cookie: {
         secure: true,
         httpOnly: true,
         sameSite: 'None',
+        maxAge: 14 * 24 * 60 * 60 * 1000
     },
 }));
 
