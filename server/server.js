@@ -95,45 +95,15 @@ app.get('/auth/google/callback', async (req, res) => {
 });
 
 // Middleware to check if user is authenticated
-const sessionStore = require(mongoURI); // Adjust this path to your MongoDB session store
-
 const isAuthenticated = async (req, res, next) => {
-    // Log session data for debugging
-    console.log('Session Data:', req.session);
-    
+    console.log('reqData:', req);
+
     // Check if the session already has tokens
-    if (!req.session.tokens) {
-        const sessionId = req._id; // Using req._id to get the session ID
-        
-        try {
-            // Fetch the session data from MongoDB using the session ID
-            const sessionData = await sessionStore.get(sessionId); // Adjust this method based on your session store
-
-            if (sessionData) {
-                // If session exists but tokens are missing
-                if (!sessionData.tokens) {
-                    // Logic to obtain new tokens goes here
-                    const newTokens = req.body.tokens; // Example of retrieving tokens from request body
-                    sessionData.tokens = newTokens; // Update tokens in the session data
-
-                    // Save the updated session back to MongoDB
-                    await sessionStore.set(sessionId, sessionData); // Save the updated session
-                }
-                // Assign the tokens from the sessionData to req.session for further use
-                req.session.tokens = sessionData.tokens;
-            } else {
-                console.log("Session not found in MongoDB.");
-                return res.status(401).send('User not authenticated');
-            }
-        } catch (error) {
-            console.error("Error fetching session from MongoDB:", error);
-            return res.status(500).send('Internal Server Error');
-        }
-    }
     if (!req.session.tokens) {
         console.log("Not authenticated");
         return res.status(401).send('User not authenticated');
     }
+
     // Set OAuth2 client credentials if tokens exist
     oauth2Client.setCredentials(req.session.tokens);
     next(); // Proceed to the next middleware or route handler
