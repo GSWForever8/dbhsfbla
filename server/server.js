@@ -60,7 +60,7 @@ app.get('/auth/google/callback', async (req, res) => {
 
         req.session.tokens = tokens;
 
-        res.redirect('https://dbhsfbla.onrender.com/#/compevents/resources'); 
+        res.redirect('https://dbhsfbla.onrender.com/compevents/resources'); 
     } catch (error) {
         console.error('Error during authentication', error);
         res.status(500).send('Authentication error');
