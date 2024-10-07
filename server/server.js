@@ -28,7 +28,9 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
+    
 // Set up session store with MongoDB
+app.use(cors(corsOptions));
 app.use(session({
     secret: sessionSecret, 
     resave: false,
@@ -45,7 +47,7 @@ app.use(session({
         maxAge: 14 * 24 * 60 * 60 * 1000
     },
 }));
-app.use(cors(corsOptions));
+
 
 app.use(express.json());
 const PORT = process.env.PORT || 3001;
