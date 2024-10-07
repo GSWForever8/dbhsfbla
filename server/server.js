@@ -6,7 +6,6 @@ const MongoStore = require('connect-mongo'); // Import connect-mongo
 require('dotenv').config();
 const crypto = require('crypto'); 
 const mongoose = require('mongoose'); // Import mongoose
-
 const app = express();
 function generateSessionSecret() {
     return crypto.randomBytes(32).toString('hex'); 
