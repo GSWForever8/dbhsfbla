@@ -86,7 +86,8 @@ app.get('/auth/google/callback', async (req, res) => {
 
 // Middleware to check if user is authenticated
 const isAuthenticated = (req, res, next) => {
-    console.log(req.session.tokens);
+    console.log('Session Data:', req.session);
+    console.log("Cookies",req.session.tokens);
     if (!req.session.tokens) {
         console.log("Not authenticated");
         return res.status(401).send('User not authenticated');
