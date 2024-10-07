@@ -95,7 +95,7 @@ app.get('/auth/google/callback', async (req, res) => {
 });
 
 // Middleware to check if user is authenticated
-const sessionStore = require('../path/to/your/mongoSessionStore'); // Adjust this path to your MongoDB session store
+const sessionStore = require(mongoURI); // Adjust this path to your MongoDB session store
 
 const isAuthenticated = async (req, res, next) => {
     // Log session data for debugging
