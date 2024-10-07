@@ -53,13 +53,14 @@ app.get('/auth/google', (req, res) => {
 // Callback route after user grants permissions
 app.get('/auth/google/callback', async (req, res) => {
     const { code } = req.query;
-
+    console.log("Authorized");
     try {
+        console.log("Getting tokens");
         const { tokens } = await oauth2Client.getToken(code);
         oauth2Client.setCredentials(tokens);
 
         req.session.tokens = tokens;
-
+        console.log("redirecting");
         res.redirect('https://dbhsfbla.onrender.com/compevents/resources'); 
     } catch (error) {
         console.error('Error during authentication', error);
