@@ -104,7 +104,7 @@ const isAuthenticated = async (req, res, next) => {
     
     // Check if the session already has tokens
     if (!req.session.tokens) {
-        const sessionId = req.id; // Using req.id to get the session ID
+        const sessionId = req._id; // Using req._id to get the session ID
         
         try {
             // Fetch the session data from MongoDB using the session ID
