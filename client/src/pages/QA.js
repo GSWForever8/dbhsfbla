@@ -57,7 +57,7 @@ export default function QA() {
               data-parent="#accordion"
             >
               <div className="card-body">
-                Change your browser setting to turn off "Prevent cross site scripting", this is due to the resource folder having a different domain from this website.
+                Change your browser setting to turn off "Prevent cross site scripting," this is due to the resource folder having a different domain from this website.
               </div>
             </div>
           </div>

@@ -72,7 +72,7 @@ export default function Resources() {
         <div className="contentwrap">
             <h1>Resources</h1>
             {error && <p>{error}</p>}
-            {loading && <h2>Loading files, please wait</h2>}
+            {loading && <p>Loading files, please wait</p>}
             <FileTree files={files} />
         </div>
     );
