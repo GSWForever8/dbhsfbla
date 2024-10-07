@@ -21,9 +21,7 @@ const corsOptions = {
     origin: 'https://dbhsfbla.onrender.com', 
     credentials: true,
 };
-app.use(cors(corsOptions));
 
-app.use(express.json());
 
 // Connect to MongoDB
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -47,7 +45,9 @@ app.use(session({
         maxAge: 14 * 24 * 60 * 60 * 1000
     },
 }));
+app.use(cors(corsOptions));
 
+app.use(express.json());
 const PORT = process.env.PORT || 3001;
 
 const oauth2Client = new google.auth.OAuth2(
