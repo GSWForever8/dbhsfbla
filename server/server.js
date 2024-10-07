@@ -58,7 +58,6 @@ app.get('/auth/google/callback', async (req, res) => {
         console.log("Getting tokens");
         const { tokens } = await oauth2Client.getToken(code);
         oauth2Client.setCredentials(tokens);
-
         req.session.tokens = tokens;
         console.log("redirecting");
         res.redirect('https://dbhsfbla.onrender.com/compevents/resources'); 
