@@ -59,6 +59,7 @@ app.get('/auth/google/callback', async (req, res) => {
         const { tokens } = await oauth2Client.getToken(code);
         oauth2Client.setCredentials(tokens);
         req.session.tokens = tokens;
+        console.log("Tokens received:", tokens);
         console.log("redirecting");
         res.redirect('https://dbhsfbla.onrender.com/compevents/resources'); 
     } catch (error) {
@@ -70,6 +71,7 @@ app.get('/auth/google/callback', async (req, res) => {
 // Middleware to check if user is authenticated
 const isAuthenticated = (req, res, next) => {
     if (!req.session.tokens) {
+        console.log("Not authenticated");
         return res.status(401).send('User not authenticated');
     }
     oauth2Client.setCredentials(req.session.tokens);
