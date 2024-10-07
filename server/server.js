@@ -86,6 +86,7 @@ app.get('/auth/google/callback', async (req, res) => {
                 console.log("req.session saved successfully");
             }
         });
+        console.log("Session ID before send:",req.sessionID);
         console.log("req before send",req.session);
         res.redirect('https://dbhsfbla.onrender.com/compevents/resources'); 
     } catch (error) {
@@ -96,6 +97,7 @@ app.get('/auth/google/callback', async (req, res) => {
 
 // Middleware to check if user is authenticated
 const isAuthenticated = async (req, res, next) => {
+    console.log("Session ID after send:",req.sessionID);
     console.log('session Data:', req.session);
 
     // Check if the session already has tokens
