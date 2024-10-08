@@ -9,6 +9,7 @@ import QA from './pages/QA';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Resource from './pages/resources';
+import Privacy from './pages/privacy';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/compevents/resources" element={<Resource/>}/>
+          <Route path="/privacy" element={<Privacy/>}/>
         </Routes>
         </div>
       <footer className="footer">
