@@ -357,7 +357,9 @@ tr:hover{
 .dropdown-item:hover{
   color:white;
 }
-
-.footer:hover{
+.privacy{
+  color:gold;
+}
+.privacy:hover{
   color:white;
 }
