@@ -5,6 +5,7 @@ import confused from '../confused.jpg';
 import cal from '../678116-calendar-512.webp';
 import list from '../vector-list-icon.jpg';
 import folder from '../folder.png';
+import roster from '../roster.png';
 export default function CompEvents() {
     return (
         <div className="contentwrap">
@@ -54,6 +55,12 @@ export default function CompEvents() {
                     <div className="icons">
                         <h3>Resource Folder</h3>
                         <img className="Image" src={folder} alt="Top"/>
+                    </div>
+                    </a>
+                    <a href="https://docs.google.com/spreadsheets/d/1Xq0CffSiYjzF1OCoq27lcM2reQLLNJUVd91YNl1Us-Y/edit?usp=sharing">
+                    <div className="icons">
+                        <h3>Roster</h3>
+                        <img className="Image" src={roster} alt="Top"/>
                     </div>
                     </a>
                     <a href="https://docs.google.com/document/d/1_6vxyYp-j06TeXr3oHiee1hvgP1RUDZ2DJaJbXAJ9Dk/edit">

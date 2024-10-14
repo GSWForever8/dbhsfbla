@@ -39,7 +39,7 @@ export default function Resources() {
     const [files, setFiles] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-
+    const [auth, setAuth] = useState(true);
     // Define the API URL
     const API_URL = 'https://dbhsfbla-resource.onrender.com'; // Replace with your backend URL
 
@@ -54,9 +54,11 @@ export default function Resources() {
             setFiles(response.data);
             setLoading(false);
         } catch (err) {
+            setAuth(false);
             setLoading(false);
             // If unauthorized, redirect to authenticate
             if (err.response && err.response.status === 401) {
+                setError("You must be authenticated to access these files. Make sure you disabled the feature to prevent cross site scripting. ")
                 authenticateUser();
             } else {
                 setError('Error fetching files');
