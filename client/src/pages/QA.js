@@ -34,7 +34,32 @@ export default function QA() {
               </div>
             </div>
           </div>
+          <div className="card">
+            <div className="card-header" id="headingFive">
+              <h5 className="mb-0">
+                <button
+                  className="btn btn-link"
+                  data-toggle="collapse"
+                  data-target="#collapseFive"
+                  aria-expanded="true"
+                  aria-controls="collapseFive"
+                >
+                  There's a big warning when I try to access the resource folder
+                </button>
+              </h5>
+            </div>
 
+            <div
+              id="collapseFive"
+              className="collapse"
+              aria-labelledby="headingFive"
+              data-parent="#accordion"
+            >
+              <div className="card-body">
+                Click advanced and click the button to continue, this is due to the resource folder backend not being verified by Google yet
+                </div>
+            </div>
+          </div>
           <div className="card">
             <div className="card-header" id="headingTwo">
               <h5 className="mb-0">
