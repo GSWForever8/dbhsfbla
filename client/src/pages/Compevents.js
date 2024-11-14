@@ -6,6 +6,7 @@ import cal from '../678116-calendar-512.webp';
 import list from '../vector-list-icon.jpg';
 import folder from '../folder.png';
 import roster from '../roster.png';
+import bench from '../test-icon-free-vector.jpg';
 export default function CompEvents() {
     return (
         <div className="contentwrap">
@@ -51,6 +52,12 @@ export default function CompEvents() {
                 </div>
                 <div>
                     <h1>Quick Links</h1>
+                    <a href="https://drive.google.com/drive/folders/1pMg1AzZLyqGYLFHKl-CAgNq2W6kTPVRQ?usp=share_link">
+                    <div className="icons">
+                        <h3>Benchmark Link</h3>
+                        <img className="Image" src={bench} alt="Top"/>
+                    </div>
+                    </a>
                     <a href="https://dbhsfbla.onrender.com/compevents/resources">
                     <div className="icons">
                         <h3>Resource Folder</h3>
